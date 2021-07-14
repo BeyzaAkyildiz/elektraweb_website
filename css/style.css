@@ -326,7 +326,8 @@ nav.small {
 /* 
 ---------------------------------------------------------------------------- */
 .main-home {
-	padding: 330px 0px 250px 0;
+	/* padding: 330px 0px 250px 0; */
+	padding-bottom: 38%;
 	z-index: 1;
 	text-align: center;
 	position: relative;
