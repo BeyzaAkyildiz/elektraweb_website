@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<title>Elektraweb modüller</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+  @media screen and (max-width:719px) {
+    .imge {
+      width: 70%;
+      margin-left: 16%;
+      margin-bottom: -12%;
+      margin-right: 9%;
+
+    }
+  }
+
+  @media screen and (max-width: 1119px) {
+
+    .dropdown_4columns {
+      width: 240px;
+    }
+
+
+    #menu li:hover .dropdown_1column,
+    #menu li:hover .dropdown_2columns,
+    #menu li:hover .dropdown_3columns,
+    #menu li:hover .dropdown_4columns,
+    #menu li:hover .dropdown_5columns {
+      left: -1px;
+      top: auto;
+      width: 240px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #menu {
+      height: 70px;
+    }
+
+  }
+
+  @media screen and (min-width: 401px) {
+    #menu {
+      height: 43px;
+    }
+
+  }
+
+  @media screen and (max-width:1119px) {
+    #menu li ul li {
+
+      width: 230px;
+    }
+
+
+  }
+
+  b,
+  strong {
+    color: #353333;
+  }
+
+  p {
+    color: #5c5757;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+  }
+
+  body,
+  ul,
+  li {
+
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  /* Navigation Bar */
+
+  #menu {
+    list-style: none;
+
+    margin: 30px auto 0px auto;
+    /* height:43px; */
+    padding: 0px 20px 0px 20px;
+
+    /* Rounded Corners */
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+    /* Background color and gradients */
+
+    background: #d9d4d4;
+    /* background: -moz-linear-gradient(top, #0272a7, #013953);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0272a7), to(#013953)); */
+
+    /* Borders */
+
+    border: 1px solid #ffffff;
+
+    -moz-box-shadow: inset 0px 0px 1px #edf9ff;
+    -webkit-box-shadow: inset 0px 0px 1px #edf9ff;
+    box-shadow: inset 0px 0px 1px #edf9ff;
+  }
+
+  #menu li {
+    float: left;
+    text-align: center;
+    position: relative;
+    padding: 4px 10px 4px 10px;
+    margin-right: 30px;
+    margin-top: 7px;
+    border: none;
+  }
+
+
+  #menu li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #726969;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    /* text-shadow: 1px 1px 1px #000; */
+  }
+
+
+
+
+  .dropdown_1column,
+  .dropdown_2columns,
+  .dropdown_3columns,
+  .dropdown_4columns,
+  .dropdown_5columns {
+    margin: 4px auto;
+    float: left;
+    position: absolute;
+    left: -999em;
+    /* Hides the drop down */
+    text-align: left;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid #777777;
+    border-top: none;
+
+    /* Gradient background */
+    background: #8f8888;
+
+    -moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+  }
+
+
+  .dropdown_4columns {
+    width: 960px;
+  }
+
+
+  #menu li:hover .dropdown_1column,
+  #menu li:hover .dropdown_2columns,
+  #menu li:hover .dropdown_3columns,
+  #menu li:hover .dropdown_4columns,
+  #menu li:hover .dropdown_5columns {
+    left: -1px;
+    top: auto;
+  }
+
+  /* Columns */
+
+  .col_1,
+  .col_2,
+  .col_3,
+  .col_4,
+  .col_5 {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .col_1 {
+    width: 301px;
+  }
+
+  #menu li a:hover {
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #726969;
+    color: #d9d4d4;
+
+  }
+
+  #menu li:hover div a {
+    font-size: 12px;
+    color: #d9d4d4;
+  }
+
+  #menu li:hover div a:hover {
+    color: #726969;
+    background-color: #d9d4d4;
+  }
+
+  #menu li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+  }
+
+  #menu li ul li {
+    font-size: 12px;
+    line-height: 24px;
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+    float: none;
+    text-align: left;
+    /* width:530px; */
+  }
+</style>
+
+<body>
+
+  <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content" style="max-width:1400px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-32">
+
+      <div class="imge"><img style="width: 40%;" src="image/k.png" alt=""></div>
+
+    </header>
+    <ul id="menu">
+
+
+
+      <li><a href="../index.html" class="drop">ANASAYFA</a>
+      <li><a href="#" class="drop">ELEKTROWEB MODÜLLERİ ⇓</a><!-- Begin 4 columns Item -->
+
+        <div class="dropdown_4columns">
+          <!-- Begin 4 columns container -->
+
+
+
+          <div class="col_1">
+
+            <ul>
+              <li><a href="#Bulut1">● Elektraweb Ön Büro Modülü</a></li>
+              <li><a href="#Bulut2">● Elektraweb POS Restoran Yönetim Programı</a></li>
+              <li><a href="#Bulut3">● ElektraWeb Temassız Misafir Uygulaması</a></li>
+              <li><a href="#Bulut4">● ElektraWeb Kanal Yönetimi</a></li>
+              <li><a href="#Bulut5">● Elektraweb CRM ve Misafir İlişkileri</a></li>
+              <li><a href="#Bulut6">● Elektraweb Satış Projeleri ve Banket Yönetimi</a></li>
+              <li><a href="#Bulut7">● ElektraWeb Online Rezervasyon Motoru</a></li>
+              <li><a href="#Bulut8">● Elektraweb Sadakat Yönetimi</a></li>
+            </ul>
+
+          </div>
+
+          <div class="col_1">
+
+
+            <ul>
+              <li><a href="#Bulut9">● Elektraweb Otel Muhasebe Yönetimi</a></li>
+
+              <li><a href="#Bulut10">● Elektraweb Stok Ve Maliyet Analizi</a></li>
+              <li><a href="#Bulut11">● Elektraweb Fiyat Yönetimi</a></li>
+              <li><a href="#Bulut12">● Elektraweb Misafir Yorum Sitelerinin Entegrasyonu</a>
+              </li>
+              <li><a href="#Bulut13">● Elektraweb e-Fatura, e-Arşiv, e-Defter</a></li>
+              <li><a href="#Bulut14">● Elektraweb Online Paket Sipariş Yönetimi</a></li>
+              <li><a href="#Bulut15">● Elektraweb Sistem Entegrasyonları</a></li>
+              <li><a href="#Bulut16">● Elektraweb Satın Alma Yönetimi</a></li>
+
+            </ul>
+
+          </div>
+
+          <div class="col_1">
+
+
+            <ul>
+              <li><a href="#Bulut17">● Elektraweb Spa ve spor salonu yönetimi </a></li>
+              <li><a href="#Bulut18">● Elektraweb Call center & Satış CRM Entegrasyonu </a>
+              </li>
+              <li><a href="#Bulut19">● Elektraweb Demirbaş ve Amortisman Yönetimi</a></li>
+              <li><a href="#Bulut20">● Elektraweb Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+              <li><a href="#Bulut21">● Elektraweb Yurt Yönetim Programı</a></li>
+              <li><a href="#Bulut22">● Elektraweb İnsan Kaynakları</a></li>
+              <li><a href="#Bulut23">● Elektraweb İnternet Güvenlik ve Loglama
+                  Sistemi</a></li>
+              <li><a href="#Bulut24">● Elektraweb Devremülk ve Devre Tatil Yönetimi</a></li>
+
+            </ul>
+
+          </div>
+
+          <div class="col_1">
+
+
+
+          </div><!-- End 4 columns container -->
+
+      </li><!-- End 4 columns Item -->
+
+
+
+
+    </ul>
+    <!-- Grid -->
+    <div class="w3-row">
+
+      <!-- Blog entries -->
+      <div class="w3-col s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut1">
+          <img src="image/onburo.gif" alt="ön büro"
+            style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>ElektraWeb Ön Büro Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb Web Tabanlı Otel Programı Ön büro modülü ile rezervasyon, resepsiyon,
+              housekeeping, fatura, folyo, channel manager, online rezervasyon, emniyet kimlik bildirimi
+              gibi işlemleri rahatlıkla gerçekleştirebilir, ayrıntılı yönetim raporlarına tek tuşla
+              ulaşabilirsiniz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/elektraweb-on-buro-programi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut2">
+          <img src="image/pos.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb POS Restoran Yönetim Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>En Kapsamlı Restoran Programı SIFIR YATIRIM MALİYETİ İLE…
+
+              Restoranınızı işletirken ihtiyaç duyacağınız online sipariş, ÜCRETSİZ dijital menü ve paket
+              sipariş programı, stok takibi, muhasebe, satın alma, demirbaş, garson ve masa takibi, rapor
+              – analiz sunumları, adisyon takibi gibi pek çok özelliğe tek program üzerinden
+              ulaşabileceksiniz.
+
+              Üstelik tamamen bulutta olduğu için sıfır yatırım maliyeti ile… Hemen kayıt yapıp kullanmaya
+              başlar ve sadece kullandığınız kadar ödersiniz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/elektraweb-pos/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut3">
+          <img src="image/1.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Temassız Misafir Uygulaması</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Sağlıklı Turizm Kriterleri uyarınca Covid-19 önlemlerini uygulayan otellerin iş yükünü
+              azaltan, müşteri memnuniyetini arttıran ELEKTRA MİSAFİR UYGULAMASI ile restoran veya SPA
+              rezervasyonu, Online check-in, yiyecek/içecek siparişi, oda temizliği, bell boy talebi gibi
+              24 farklı işlem için sosyal mesafe korunduğu gibi, sağlanan dijital hizmetlerle oteller için
+              yeni kazançların kapıları da aralanıyor.Uygulama, misafirleriniz, rezervasyon, satın alma ve
+              hizmet taleplerini dijital olarak iletip, alternatifler arasından seçim yapıp, online olarak
+              onaylayıp, online temassız ödeme yapabilmesine olanak sağlıyor.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/elektra-otellerde-temassiz-misafir-uygulamalari/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut4">
+          <img src="image/2.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Kanal Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>ElektraWeb, yalnızca çevrimiçi kanalları (Booking.com, Expedia, Hotelbeds, HotelsPro vb.)
+              Senkronize etmekle kalmayan, aynı zamanda oteldeki rezervasyonları alan entegre bir kanal
+              yöneticisine sahiptir. Bu yüzden çok daha kolay ve daha etkilidir.
+              ElektraWeb, doluluk bilgileri olan iki yönlü bir bağlantıya sahiptir ve fiyatlar kanallara
+              gönderilir ve rezervasyonlar alınır.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/kanal-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut5">
+          <img src="image/crmm.png" alt="ön büro"
+            style="width: 95%; margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb CRM ve Misafir İlişkileri</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Girilen tüm istek ve şikayetler otomatik görev yönetimine dahil olur.
+              İşin tanımına göre, bölümü, yetkilisi, önemi ve beklenen bitiş süresi belirlenir.
+              İş, ilgili birimin ekranına veya mobil cihazına düşer. Çağrıyı alan görevli ‘göreve başla’
+              tuşuna basarak başlar ve bittiğinde ise ‘tamamla’ diyerek bitirir.
+              Eğer iş planlanan ve/veya max zaman diliminde bitmez ise otomatik bir üste mesaj gider.
+              Misafir ile ilgili olan işlemler rezervasyon kartı içerisinden de takip edilir. Hatta
+              istenirse check-in, check-out, folyo ve faturalama işlemleri esnasında otomatik hatırlatma
+              yapar.
+              VIP, setup ve ön ödeme kontrol gibi işlemler böylece hem hatırlatma hem de ilgili bölüme bir
+              görev olarak tanımlanmış olur.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/crm-ve-misafir-iliskileri/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut6">
+          <img src="image/4.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Satış Projeleri ve Banket Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb Satış Projeleri ve Banket Yönetimi ile, tüm satış projelerinizi tek ekrandan
+              izleyebilirsiniz.
+
+              Kurum / Firma Görüşmeleri Takibi sağlayabilirsiniz.
+              Teklif ve Sözleşme Takibi yapabilirsiniz ve
+              Toplu Rezervasyon ve Banket Satışları,
+              Anlaşmalar,
+              Rakip Analizi,
+              işlemlerini rahatlıkla yapabilirsiniz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/banket-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut7">
+          <img src="image/8.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Online Rezervasyon Motoru</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Otelinizi Kendi Web Sitenizden Dünyaya Açın, Karlı Satın!
+              ElektraWeb, otel misafirleri ve seyahat acentelerine yönelik, webde ve mobil olarak
+              kullanılabilen, ön büroya entegre edilmiş bir online rezervasyon motoruna sahiptir. Grup ve
+              zincir otellerde, merkezi rezervasyon sistemi(CRS), online rezervasyon motoru olarak
+              kullanılabilir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/online-rezervasyon-motoru/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut8">
+          <img src="image/9.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Sadakat Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Misafirlerinizin tekrar geliş sayısını arttırmak ve onları daha yakından tanımak için Sadakat
+              Yönetimi ile kampanyalar düzenleyebilir ve puan kazanmalarını sağlayabilirsiniz.
+              Misafirlerin kazanacakları puanlar bir sonraki tatilleri için yeniden sizi tercih etmeleri
+              için etken olacaktır.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/sadakat-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut9">
+          <img src="image/10.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>lektraweb Otel Muhasebe Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Otellerin ihtiyaçlarına göre özelleştirilmiş kapsamlı bir web tabanlı muhasebe yönetim
+              sistemidir. Ön muhasebe ve genel muhasebe dışında işletmenin idari süreçlerinin tamamını
+              yönetebilecek satınalma, demirbaş, personel, stok ve satış yönetimi modüllerine de sahiptir.
+              Tamamen modüler olarak tasarlandığından ihtiyaç doğrultusunda istenilen modüller sonradan da
+              eklenebilir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/etsweb-muhasebe-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut10">
+          <img src="image/er.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>ETSweb Stok ve Maliyet Analizi Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>İşletmenizdeki stok hareketlerini görmenizi, alış ve satışlarınızı planlayabilmenizi,
+              müşterilerinizin tüketim eğilimlerini tahmin etmenizi, personelinizin stokları kullanma
+              şeklini analiz edebilmenizi ve nihayetinde hedefleriniz için öngörüde bulunabilmenizi
+              sağlar.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/etsweb-stok-ve-maliyet-analizi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut11">
+          <img src="image/er2.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Otel Fiyat Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>ElektraWeb fiyat yönetimi ile belirlediğiniz rakiplerinizin bütün satış kanallarındaki
+              fiyatları analiz edilerek en uygun fiyat belirlenir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/fiyat-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut12">
+          <img src="image/11.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Misafir Yorum Sitelerinin Entegrasyonu</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Aylık 260 milyon tekil kullanıcıya sahip olan, dünyanın en büyük seyahat sitesi
+              TripAdvisor’dan otelinize direkt link alır, hem satışlarınızı artırır hem de
+              müşterilerinizin otelliniz hakkında yorum ve tanıtım yazıları yazmasına yardımcı olursunuz.
+
+              TripConnect, TripAdvisor profilinizde ve işletmenizin bulunduğu bölge arama sonuçlarında
+              fiyatlarınızı ve doluluk durumunuzu gösterme konusunda size destek sağlar. TripConnect
+              bağlantınız Çevrimiçi Seyahat Acenteleri’nin bağlantılarının yanında görünür ve gezginleri
+              doğrudan çevrimiçi rezervasyon sayfanıza göndererek gelirleri arttırma konusunda size
+              inanılmaz bir fırsat verir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/misafir-yorum-sitelerinin-entegrasyonu/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut13">
+          <img src="image/er3.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Dijital dönüşüm e-Fatura, e-Arşiv ve e-Defter ile başlar</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Otelinizin “Dijital Dönüşüm” sürecinizi Elektra ile yönetebilirsiniz.
+
+              e-Fatura, e-Defter ve e-Arşiv modülümüz ile finansal operasyonlarınızı yasaya uygun olarak
+              kolaylıkla gerçekleştirebilirsiniz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/e-fatura-e-arsiv-e-defter/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut14">
+          <img src="image/er4.jpg" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Online Paket Sipariş Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>BİSİPARİS.COM
+              restoran, kafe, klüp, plaj veya sosyal tesis gibi ağırlama sektöründe çalışan işletmeler
+              için geliştirilmiş
+              en kapsamlı dijital menü, üyelik ve online satış sistemidir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/online-paket-siparis-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut15">
+          <img src="image/er5.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Sistem Entegrasyonları</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb Otel Programı, sistem entegrasyonları sayesinde 3. parti sistemlerle entegre
+              çalışır. <br>
+              – Kapı Kilit : Amadeus, Kale, Adel, Makfa, Netflock, Somkart, BTlock, Brasco, ETS <br>
+
+              – Santral: Karel, Alcatel, Nec, Telesis, Siemens, Samsung, Miwa, Mitel, Meridyen <br>
+
+              – Enerji: Sistem içinde kullanılan klimalar ve aydınlatma sistemleri ile entegre çalışır
+              <br>
+
+              – IP TV: Vestel, Arçelik- Acente: Sejour
+            </p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/sistem-entegrasyonlari/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut16">
+          <img src="image/er6.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Satın Alma Modül</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb Satınalma Yönetimi, departman talebinden siparişin teslimatına kadar ki tüm
+              operasyonu takip ederek yönetilmesini sağlayan modüldür.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/etsweb-satin-alma-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut17">
+          <img src="image/er7.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Spa Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Spa merkezleri, sağlık merkezleri, spor merkezleri, kulüpler ve dernekler gibi üyelikle
+              çalışan tüm kurumlar için geliştirilmiş web tabanlı bir yazılımdır.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/elektraweb-spa/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut18">
+          <img src="image/er8.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Call Center & Satış CRM Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektra Otel Programı Santral entegrasyonu ile çağrı merkezine gelen talepler kayıt altına
+              alınır. Rezervasyon gerçekleştiğinde misafir profili ile birleştirilir. Böylece gelen
+              çağrıları misafirin adı ile karşılar, tüm geçmiş arama ve rezervasyon bilgilerini görerek
+              misafiri yönlendirir ve tüm süreci tek bir program üzerinden yönetmiş olursunuz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/call-center-satis-crm-entegrasyonu/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut19">
+          <img src="image/er9.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Demirbaş ve Amortisman Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb Demirbaş Programı barkotlu el bilgisayarı ile sayım yapabilen, ürünlerin
+              özelliklerine ve yerlerine göre barkod basabilen, garanti ve servis anlaşmalarını takip
+              edebilen ve muhasebe ile entegre çalışan bir modüldür.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/etsweb-demirbas-ve-amortisman-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut20">
+          <img src="image/er10.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Kimlikokur Kimlik ve Pasaport Okuma Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Kimlikokur, dünyadaki tüm kimlik ve pasaportları okuyup tanıyabilen, resim ve metin olarak
+              saklayıp, windows ortamındaki tüm programlara aktarabilen bir yazılımdır.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/kimlikokur-kimlik-ve-pasaport-okuma/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut21">
+          <img src="image/er11.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektraweb Yurt Yönetim Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Opex Yurt Yönetimi Programı, Yurt yönetiminin;
+              <br>
+              -Konaklayan öğrencilerin sözleşmelerini hazırlayabildiği <br>
+              -Öğrencilerin ve ailelerinin bilgilerini kaydedip, ihtiyaç halinde ulaşabilecekleri <br>
+              -CRM sistemini yönetebilecekleri <br>
+              -Ödeme ve tahsilat süreçlerini takip edebilecekleri <br>
+              -Mobil uygulama sayesinde öğrenciler ile 7/24 iletişim halinde kalabildikleri <br>
+              -Online Anketler yoluyla memnuniyet araştırması yapabildikleri <br>
+              -Online arıza bildirimi alabildikleri <br>
+              -Odaların müsaitlik durumlarını tek ekranda izleyebilecekleri <br>
+              -Kullanımı kolay ve işlevsel bir yazılımdır
+            </p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/yurt-yonetim-programi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut22">
+          <img src="image/er12.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>ElektraWeb İnsan Kaynakları Programı</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Elektraweb İK Programı, web tabanlı ve bulut yapıda olduğu için her yerden, her an programa
+              erişebilirsiniz. Dünyanın en güvenli sunucularında barındırılmaktadır. Bu sayede yüksek hız
+              ve güvenlik sağlar. Yedeklemeler otomatik yapılır. Üstelik herhangi bir donanıma ve ön
+              kuruluma ihtiyaç duyulmadan, web üzerinden erişim sağlandığından, hemen kullanmaya
+              başlayabilir ve çok ekonomik fiyatlarla küçük ölçekli şirketlerden binlerce kişilik
+              holdinglere kadar pek çok işletme tarafından kullanılan Elektraweb Web Tabanlı İnsan
+              Kaynakları Sistemi‘nin avantajlı dünyasından yararlanabilirsiniz.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/elektraweb-insan-kaynaklari/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut23">
+          <img src="image/er13.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>iSafe İnternet Güvenlik ve Loglama Sistemi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>5651 sayılı yasa ile internet kullanılan yerlerde kullanıma ait trafik bilgilerinin zaman
+              (hash) damgası ile birlikte saklanması ve gizliliğinin sağlanması zorunlu hale
+              getirilmiştir. iSafe, internet verilerinin 5651 nolu yasada belirtildiği şekilde
+              muhafazasını ve gizliliğini sağlayan, yazılım + donanım olarak sunulan bir hotspot
+              çözümüdür.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/isafe-internet-guvenlik-ve-loglama-sistemi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white" id="Bulut24">
+          <img src="image/er14.gif" alt="ön büro" style="width:95%;margin-left:2.5%;margin-top: 2%;margin-bottom: 1%;">
+          <div class="w3-container">
+            <h3 style="margin: 1.5%;"><b>Elektra Elektraweb Devremülk ve Devre Tatil Yönetimi</b></h3>
+
+          </div>
+
+          <div class="w3-container" style="margin-left: 1.5%;margin-right: 1.5%">
+            <p>Web tabanlı yapısı sayesinde her yerden ulaşılabilir. Satış ekibi sisteme her zaman bağlanıp
+              sözleşme girebilir, boş daire ve dönem bilgilerini görebilir. Sözleşmelerin girilmesi,
+              senetlerin yazdırılması işlemi, kolaylıkla ofis dışından bile yapılabilir.</p>
+            <div class="w3-row">
+              <div class="w3-col  s12">
+                <a href="https://www.elektraweb.com/otel-yazilimi/devremulk-ve-devre-tatil-yonetimi/">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- END BLOG ENTRIES -->
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer style="text-align: center;" class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+
+      <p style="color: white;">@2021 Beyza Akyıldız</p>
+    </footer>
+
+</body>
+
+</html>

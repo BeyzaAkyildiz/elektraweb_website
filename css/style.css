@@ -52,7 +52,7 @@
    
   .menu li a:hover{
 	  color: #331111;
-	background: rgb(248,140,0);
+	background: rgb(238, 216, 216);
 	transition: .5s;
   }
 
@@ -337,7 +337,7 @@ nav.small {
 	min-height: 400px;
 }
 .home-page-photo {
-	background-image: url("../images/i.jpg");
+	/* background-image: url("../images/ensonbudur.jpg"); */
 	background-size:cover;
 	z-index: -1;
 	position: absolute;
@@ -349,6 +349,7 @@ nav.small {
 	width: 100%;
 	height: auto;
 }
+
 
 .home__header-content {
 	-webkit-transform: translateY(-50%);
@@ -467,35 +468,38 @@ footer p{
 
 /* 
 ----------------------------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1059px) {
 	.navbar-custom {
 		background-color: #ffffff;
 	}
 	.navbar-custom .navbar-brand {
-		color: #000;
-		padding: 15px;
+		color: rgb(7, 0, 0);
+		padding: 30px;
+	
 	}
 	.work-list li {
 		width: 100%;
 		display: block;
+		
 	}
+	
 }
 
-@media only screen and (max-width: 400px){
+/* @media  screen and (max-width: 600px){
 	.home-page-photo {
-		background-image: url("../images/i.jpg");
-		background-size:cover;
-		z-index: -1;
-		position: absolute;
-		top: 0;
+		
 	
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
+	 
+          background-size: cover;
+         
+          max-height: 800px;
+		  max-width: 600px;
+        background-image: cover;
+        
+	
+		
 	}
-}
+} */
 /* 
 ----------------------------------------------------------------------------- */
 .back-to-top {
@@ -540,10 +544,26 @@ border-style: solid;
 color: rgb(158, 26, 3);
 
 }
+@media screen and (max-width:770px){
+	.navbar-brand>img {
+		
+		width: 30%;
+		margin-top: -4%;
+		
+	}
+	
+}
+@media screen and (min-width:771px){
+	.navbar-brand>img {
+		
+		width: 60%;
+	
+	}
+	
+}
 
-
-@media only screen and (max-width: 479px) {
+/* @media only screen and (max-width: 479px) {
 #style-switcher {
     display: none;
 }
-}
+} */
