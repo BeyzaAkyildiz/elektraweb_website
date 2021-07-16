@@ -3,20 +3,16 @@
 <title>Elektraweb modüller</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
-<link rel="stylesheet" href="css/font-awesome.min.css" />
+<!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
 
 <style>
- #btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
 
-}
   @media screen and (max-width:719px) {
     .imge {
       width: 70%;
@@ -116,10 +112,7 @@
     /* Background color and gradients */
 
     background: #d9d4d4;
-    /* background: -moz-linear-gradient(top, #0272a7, #013953);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0272a7), to(#013953)); */
-
-    /* Borders */
+   
 
     border: 1px solid #ffffff;
 
@@ -243,7 +236,25 @@
     text-align: left;
     /* width:530px; */
   }
+  #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(184, 164, 164); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
 
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
  
 </style>
 
@@ -263,7 +274,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
       <img style="width: 20%;float: left;" src="image/elektraweb.png" alt="elektraweb">
-      <li style="margin-top: 2.5%;margin-left: 1%;font-weight: "><a href="../index.html" class="drop">ANASAYFA</a>
+      <li style="margin-top: 2.5%;margin-left: 1%; "><a href="../index.html" class="drop">ANASAYFA</a>
       <li style="margin-top: 2.5%;"><a href="#" class="drop">ELEKTRAWEB MODÜLLERİ ⇓</a>
 
         <div class="dropdown_4columns" >
@@ -358,7 +369,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="w3-row">
               <div class="w3-col  s12">
                 <a href="https://www.elektraweb.com/otel-yazilimi/elektraweb-on-buro-programi/">
-                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
+                  <p style="margin-bottom: 2%;"><button class="w3-button w3-padding-large w3-white w3-border"><b>Daha Fazla »</b></button></p>
                 </a>
               </div>
 
@@ -935,7 +946,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <hr>
 
-        <!-- END BLOG ENTRIES -->
+       
 
       </div>
     </div>
@@ -944,59 +955,36 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
 
-    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <!-- Explanation -->
-    <div class="container mt-4 text-center" style="height: 2000px;">
-      <p>
-        Start scrolling the page and a strong
-        <strong>"Back to top" button </strong> will appear in the
-        <strong>bottom right corner</strong> of the screen.
-      </p>
-    
-      <p>
-        Click this button and you will be taken to the top of the page.
-      </p>
-    </div>
-
-
+   
     <!-- Footer -->
     <footer style="text-align: center;" class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
 
       <p style="color: white;">@2021 Beyza Akyıldız</p>
     </footer>
    <!--back to top-->
-
+   <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
 <script>
-  //Get the button
-let mybutton = document.getElementById("btn-back-to-top");
+  //Get the button:
+mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
 }
+
 // When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-</script>
 
+</script>
 
 </body>
 

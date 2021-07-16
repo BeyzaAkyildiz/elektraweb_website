@@ -5,12 +5,14 @@
 
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type"> -->
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<style>
-.mySlides {display:none;}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type"> -->
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <style>
+    .mySlides {
+      display: none;
+    }
+  </style>
 
   <meta charset="utf-8" />
 
@@ -51,65 +53,142 @@
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-        data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a  class="navbar-brand" href="#"><img src="images/k.png" ></a>
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/k.png"></a>
       </div>
-      
 
+      <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: transparent;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: inline-block;
+          color: rgb(110, 104, 104);
+          /* yazı rengi*/
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 14px;
+        }
+
+        li a:hover,
+        .menu:hover {
+          /* background-color: #1a3680; */
+          color: rgb(49, 48, 48);
+        }
+
+        li.menu {
+          display: inline-block;
+        }
+
+        .acilir-menu {
+          display: none;
+          position: absolute;
+          background-color: rgb(211, 205, 205);
+          min-width: 120px;
+        }
+
+        .acilir-menu a {
+          display: block;
+          text-align: left;
+        }
+
+        .acilir-menu a:hover {
+          color: rgb(205, 205, 206);
+          background-color: rgb(88, 86, 86);
+          /* içine gelindiğinde yazı rengi*/
+        }
+
+        .menu:hover .acilir-menu {
+          display: block;
+        }
+        @media screen and (max-width:780px) {
+          ul {
+          list-style-type: none;
+          margin: 0;
+          padding-left: 40%;
+          padding-right: 40%;
+          overflow: hidden;
+          background-color: transparent;
+        }
+
+          
+        }
+        @media screen and (max-width:292px) {
+          ul {
+          list-style-type: none;
+          margin: 0;
+          text-align: left;
+          /* padding-left: 40%; */
+          padding-right: 40%;
+          overflow: hidden;
+          background-color: transparent;
+        }
+
+          
+        }
+      </style>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-
-          <li style="padding-right: 30px;"><a href="#home">ANASAYFA</a></li>
-         
-          <li>
-            <nav class="menu">
-            <ul>
-              <li><a href="#">BULUT TEKNOLOJİSİ</a>
-                <ul>
-                  <li><a href="#Bulut">Bulut Tabanlı Yazılım Nedir?</a></li>
-                  <li><a href="#services">Bulut Tabanlı Yazılımın Faydaları</a></li>
-        
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </li>
-         
-        <li>
-          <nav class="menu">
           <ul>
-            <li><a href="#">ELEKTRAWEB</a>
-              <ul>
-                <li><a href="#elektraweb">Elektraweb Otel Yönetim Sistemi</a></li>
-                <li><a href="#neden elektraweb">Neden ElektraWeb Otel Yazılımını Kullanmalısınız ?</a></li>
-                <li><a href="#elektraweb yapılabilecekler">ElektraWeb ile Neler Yapabilirsiniz ?</a></li>
-                <li><a href="#elektraweb teknolojileri">Ekektraweb Teknolojileri</a></li>
-      
-              </ul>
+            <li><a style="color: #6E6868;" href="#home">ANASAYFA</a></li>
+            <li style="text-align: left;" class="menu"><a style="text-align: left;" href="#">BULUT TEKNOLOJİSİ</a>
+              <div class="acilir-menu">
+                <a href="#Bulut">Bulut Tabanlı Yazılım Nedir</a>
+                <a href="#services">Bulut Tabanlı Yazılımın Faydaları</a>
+                
+              </div>
             </li>
+
+            <li class="menu"><a href="#">ELEKTRAWEB</a>
+              <div class="acilir-menu">
+                <a href="#elektraweb">Elektraweb Otel Yönetim Sistemi</a>
+                <a href="#neden elektraweb">Neden ElektraWeb Otel Yazılımı Kullanmalısınız</a>
+                <a href="#elektraweb yapılabilecekler">ElektraWeb ile Neler Yapabilirsiniz</a>
+                <a href="#elektraweb teknolojileri">ElektraWeb Teknolojileri</a>
+              </div>
+            </li>
+
+
+
+
+            <li ><a href="2/index.html">MODÜLLER</a></li>
+            <li><a style="color: #6E6868;" href="#contact">İLETİŞİM</a></li>
+
           </ul>
-        </nav>
-      </li>
-           <li style="padding-right: 30px;"><a href="2/index.html">MODÜLLER</a></li>
-          <li><a href="#contact">İLETİŞİM</a></li>
+
+
+
+
+
+
       </div>
     </div>
   </nav>
 
-   <section class="main-home" id="home">
-    <div  class="home-page-photo"><img style="width: 100%;height: 100%;" src="images/son.jpg" alt=""></div>
+  <section class="main-home" id="home">
+    <div class="home-page-photo"><img style="width: 100%;height: 100%;" src="images/son.jpg" alt="elektraweb"></div>
 
   </section>
   <div id="Bulut"></div>
   <div id="ana_div" class="container ">
-    <div class="row mt-3" >
+    <div class="row mt-3">
 
-      <div class="col-md-6" id="div3"> <img src="images/device2-.png" style="width: 100%;" class="foto" /></div>
+      <div class="col-md-6" id="div3"> <img src="images/device2-.png" style="width: 100%;" class="foto" alt="elektraweb"></div>
       <div class="col-md-6" id="div3">
         <div class="kutu">
           <h1 style="font-size: 36px;
@@ -148,7 +227,7 @@
             <div class="col-wrapper">
               <div class="icon-border">
 
-                <img src="images/15.png" alt="" style="width: 80px;">
+                <img src="images/15.png" alt="elektraweb" style="width: 80px;">
               </div>
               <h5>Gizlilik</h5>
               <p>Gelişmiş güvenlik sistemleri ile saklı verilerin değiştirilmesi, bozulması veya çalınması gibi
@@ -166,7 +245,7 @@
               <div class="icon-border">
 
                 <div class="boxes-icon">
-                  <img src="images/6.png" alt="" style="width: 90px;">
+                  <img src="images/6.png" alt="elektraweb" style="width: 90px;">
                 </div>
               </div>
               <h5>Ulaşılabilirlik</h5>
@@ -182,7 +261,7 @@
             <div class="col-wrapper">
               <div class="icon-border">
 
-                <img src="images/9.jpg" alt="" style="width:100px;">
+                <img src="images/9.jpg" alt="elektraweb" style="width:100px;">
               </div>
 
 
@@ -203,7 +282,7 @@
             <div class="col-wrapper">
               <div class="icon-border">
 
-                <img src="images/12.jpg" alt="" style="width:110px;">
+                <img src="images/12.jpg" alt="elektraweb" style="width:110px;">
               </div>
               <h5>Ölçeklenebilirlik</h5>
               <p>İhtiyaç doğrultusunda depolama alanları kolayca genişletilebilir. Fiziksel depolamadaki yeni donanım
@@ -219,7 +298,7 @@
             <div class="col-wrapper">
               <div class="icon-border">
 
-                <img src="images/14.jpg" alt="" style="width:100px;">
+                <img src="images/14.jpg" alt="elektraweb" style="width:100px;">
               </div>
               <h5>Güncelleme</h5>
               <p>Farklı yerlerden erişim sağlanması imkanıyla yapılan güncellemeler buluta bağlı tüm cihazlara çok kısa
@@ -237,7 +316,7 @@
             <div class="col-wrapper">
               <div class="icon-border">
 
-                <img src="images/14.png" alt="" style="width:100px;">
+                <img src="images/14.png" alt="elektraweb" style="width:100px;">
                 <h5>Uyumluluk</h5>
                 <p>Bulut teknolojisi her sektörden firma için uygundur. Örneğin klinik yönetim yazılımı ile diş
                   kliniklerine sunulan bulut hizmetinin, apartman yönetim ve izleme sistemi için de uygulanabilirliği
@@ -248,65 +327,69 @@
         </div>
 
       </div>
-<div id="elektraweb"></div>
+      <div id="elektraweb"></div>
   </section>
   <br>
   <br>
-<!-- .................. -->
+  <!-- .................. -->
 
-<h1 style="font-weight: bolder;text-align: center;"  class="w3-center">Elektraweb Otel Yönetim Sistemi</h1>
-<div id="ana_div" class="container ">
-  <div class="row mt-3">
+  <h1 style="font-weight: bolder;text-align: center;" class="w3-center">Elektraweb Otel Yönetim Sistemi</h1>
+  <div id="ana_div" class="container ">
+    <div class="row mt-3">
 
-    <div class="col-md-6" id="div3"> 
-      <div class="w3-content w3-section" style="max-width:500px">
-        <img class="mySlides" src="images/s1.jpg" style="width:100%">
-        <img class="mySlides" src="images/s2.jpg" style="width:100%">
-        <img class="mySlides" src="images/s3.jpg" style="width:100%">
-        <img class="mySlides" src="images/s4.jpg" style="width:100%">
-        <img class="mySlides" src="images/s5.jpg" style="width:100%">
-        <img class="mySlides" src="images/s6.jpg" style="width:100%">
-        <img class="mySlides" src="images/s7.jpg" style="width:100%">
-        <img class="mySlides" src="images/s8.jpg" style="width:100%">
-        <img class="mySlides" src="images/s9.jpg" style="width:100%">
-        <img class="mySlides" src="images/s10.jpg" style="width:100%">
-        <img class="mySlides" src="images/s11.jpg" style="width:100%">
-        <img class="mySlides" src="images/s12.jpg" style="width:100%">
-        <img class="mySlides" src="images/s13.jpg" style="width:100%">
-        <img class="mySlides" src="images/s14.jpg" style="width:100%">
-        <img class="mySlides" src="images/s15.jpg" style="width:100%">
+      <div class="col-md-6" id="div3">
+        <div class="w3-content w3-section" style="max-width:500px">
+          <img class="mySlides" src="images/s1.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s2.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s3.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s4.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s5.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s6.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s7.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s8.jpg" style="width:100%" alt="elektraweb"> 
+          <img class="mySlides" src="images/s9.jpg" style="width:100%" alt="elektraweb">  
+          <img class="mySlides" src="images/s10.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s11.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s12.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s13.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s14.jpg" style="width:100%" alt="elektraweb">
+          <img class="mySlides" src="images/s15.jpg" style="width:100%" alt="elektraweb">
+        </div>
+
+        <script>
+          var myIndex = 0;
+          carousel();
+
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+        </script>
       </div>
-      
-      <script>
-      var myIndex = 0;
-      carousel();
-      
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";  
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}    
-        x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-      }
-      </script>
-    </div>
-    <div class="col-md-6" id="div3">
-      <div class="kutu" id="Bulut">
-       
-        <p style="margin-top: 100px;"> Elektra Otel Yönetim Sistemi her büyüklükteki otelin tüm departmanları ile birlikte entegre olarak yönetilmesini sağlayacak 28 farklı modülden oluşur. En kapsamlı otel yazılımıdır. Otelin ihtiyacına göre yazılım özelleştirilebilir. Çağrı destek hattı ille 7/24 destek hizmeti verir.  2020 yılı itibariyle 4000 tesisle Türkiye’de en yaygın kullanılan Otel Otomasyonu olan ELEKTRA, pazarında lider konumuna gelmiştir.</p>
-        
-         
+      <div class="col-md-6" id="div3">
+        <div class="kutu" id="Bulut">
+
+          <p style="margin-top: 100px;"> Elektra Otel Yönetim Sistemi her büyüklükteki otelin tüm departmanları ile
+            birlikte entegre olarak yönetilmesini sağlayacak 28 farklı modülden oluşur. En kapsamlı otel yazılımıdır.
+            Otelin ihtiyacına göre yazılım özelleştirilebilir. Çağrı destek hattı ille 7/24 destek hizmeti verir. 2020
+            yılı itibariyle 4000 tesisle Türkiye’de en yaygın kullanılan Otel Otomasyonu olan ELEKTRA, pazarında lider
+            konumuna gelmiştir.</p>
+
+
+        </div>
       </div>
     </div>
+
   </div>
-
-</div>
-<!-- ................. -->
-<div id="neden elektraweb"></div>
+  <!-- ................. -->
+  <div id="neden elektraweb"></div>
 
 
 
@@ -329,7 +412,7 @@
 
 
             <div class="tab-content">
-              <img src="images/elk.jpg" style="max-width: 100%;" alt="" style="float: left;">
+              <img src="images/elk.jpg" style="max-width: 100%;" alt="elektraweb" style="float: left;">
 
             </div>
 
@@ -456,11 +539,11 @@
     <!--/.row-->
     </div>
     <!--/.container-->
-  </section> 
+  </section>
   <div id="elektraweb yapılabilecekler"></div>
   <br><br>
   <!--End Why Choose us-->
- 
+
   <div class="title-box text-center">
     <h1 style="margin-bottom:60px ; margin-top: 80px; font-weight: bolder;" class="title">ElektraWeb ile Neler
       Yapabilirsiniz ?</h1>
@@ -469,58 +552,69 @@
 
   <div class="temel" style="margin-left: 140px;margin-right: 140px;">
 
-    <div class="row" style="margin-top: 100px;box-sizing: border-box;margin-right:0px: 0px;margin-left: 0px;">
+    <div class="row" style="margin-top: 100px;box-sizing: border-box;margin-right:0px 0px;margin-left: 0px;">
 
       <div class="col-md-3" style="text-align: left;">
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/kat-hizmetleri/'" class="buttons">✓ Kat Hizmetleri</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/kat-hizmetleri/'" class="buttons">✓ Kat
+          Hizmetleri</div>
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
           onclick="location.href='https://www.elektraweb.com/ozellikler/check-in-tr/'" class="buttons">✓ Check-In</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/check-out-tr/'" class="buttons">✓ Check-Out</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/check-out-tr/'" class="buttons">✓ Check-Out
+        </div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/check-in-islemleri/'" class="buttons"> ✓ Online Check-In</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/check-in-islemleri/'" class="buttons"> ✓ Online
+          Check-In</div>
 
         <br>
 
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/kullanici-rolleri-ve-guvenlik/'" class="buttons"> ✓ Kullanıcı Rolleri</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/kullanici-rolleri-ve-guvenlik/'"
+          class="buttons"> ✓ Kullanıcı Rolleri</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-kayitlari-gecmisi/'" class="buttons">✓ Günlük Kayıtları Geçmişi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-kayitlari-gecmisi/'" class="buttons">✓
+          Günlük Kayıtları Geçmişi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/coklu-dil-secenekleri/'" class="buttons">✓ Çoklu Dil Seçenekleri</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/coklu-dil-secenekleri/'" class="buttons">✓ Çoklu
+          Dil Seçenekleri</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/coklu-para-birimi/'" class="buttons">✓ Çoklu Para Birimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/coklu-para-birimi/'" class="buttons">✓ Çoklu
+          Para Birimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/doviz-degisimi/'" class="buttons">✓ Döviz Bozdurma İşlemler</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/doviz-degisimi/'" class="buttons">✓ Döviz
+          Bozdurma İşlemler</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/sms-ve-e-posta-gondericisi/'" class="buttons">✓ Sms ve E-posta Göndericisit</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/sms-ve-e-posta-gondericisi/'" class="buttons">✓
+          Sms ve E-posta Göndericisit</div>
 
       </div>
-      
+
       <div class="col-md-3" style="text-align: left">
-        
+
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-gosterge-tablosu/'" class="buttons">✓ Günlük Durum</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-gosterge-tablosu/'" class="buttons">✓
+          Günlük Durum</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-fiyatlar-ve-stok-durumu/'" class="buttons">✓ Günlük Fiyatlar Ve Doluluk Durumu</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/gunluk-fiyatlar-ve-stok-durumu/'"
+          class="buttons">✓ Günlük Fiyatlar Ve Doluluk Durumu</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
@@ -528,12 +622,14 @@
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/alacak-hesaplari/'" class="buttons">✓ Room Rack</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/alacak-hesaplari/'" class="buttons">✓ Room Rack
+        </div>
 
         <br>
 
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/fatura-ve-hesap-karti/'" class="buttons">✓ Fatura Ve Hesap Kartı</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/fatura-ve-hesap-karti/'" class="buttons">✓
+          Fatura Ve Hesap Kartı</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
@@ -541,7 +637,8 @@
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/gider-takibi/'" class="buttons">✓ Gider Takibi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/gider-takibi/'" class="buttons">✓ Gider Takibi
+        </div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
@@ -549,96 +646,117 @@
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/belge-arsivi/'" class="buttons">✓ Belge Arşivi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/belge-arsivi/'" class="buttons">✓ Belge Arşivi
+        </div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/forecast-grafikleri/'" class="buttons">✓ Forecast</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/forecast-grafikleri/'" class="buttons">✓
+          Forecast</div>
 
       </div>
-      
+
       <div class="col-md-3" style="text-align: left">
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
           onclick="location.href='https://www.elektraweb.com/ozellikler/gun-sonu/'" class="buttons">✓ Gün Sonu</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/quick-desk/'" class="buttons">✓ Hızlı İşlem</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/quick-desk/'" class="buttons">✓ Hızlı İşlem
+        </div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/oda-degisim-planlari/'" class="buttons">✓ Oda Değişim Planı</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/oda-degisim-planlari/'" class="buttons">✓ Oda
+          Değişim Planı</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/baglantili-odalar/'" class="buttons">✓ Bağlantılı Oteller</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/baglantili-odalar/'" class="buttons">✓
+          Bağlantılı Oteller</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/uyandirma-cagrilari/'" class="buttons">✓ Uyandırma Çağrısı</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/uyandirma-cagrilari/'" class="buttons">✓
+          Uyandırma Çağrısı</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/cagri-takibi/'" class="buttons">✓ Çağrı Takibi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/cagri-takibi/'" class="buttons">✓ Çağrı Takibi
+        </div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/housekeeping-tr/'" class="buttons">✓ Housekeeping</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/housekeeping-tr/'" class="buttons">✓
+          Housekeeping</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/crm-ve-sadakat/'" class="buttons">✓ CRM Ve Misafir İlişkileri</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/crm-ve-sadakat/'" class="buttons">✓ CRM Ve
+          Misafir İlişkileri</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/gorev-yonetimi/'" class="buttons">✓ Görev Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/gorev-yonetimi/'" class="buttons">✓ Görev
+          Yönetimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/kayip-ve-bulunanlar/'" class="buttons">✓ Kayıp Ve Bulunanlar</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/kayip-ve-bulunanlar/'" class="buttons">✓ Kayıp
+          Ve Bulunanlar</div>
 
-      </div> 
-      
+      </div>
+
       <div class="col-md-3" style="text-align: left;margin-right: 0px;">
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/akilli-kimlik-okuyucu/'" class="buttons">✓ Akıllı Kimlik Okuyucu</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/akilli-kimlik-okuyucu/'" class="buttons">✓
+          Akıllı Kimlik Okuyucu</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/rezervasyon-motoru/'" class="buttons">✓ Online Rezervasyon Motoru</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/rezervasyon-motoru/'" class="buttons">✓ Online
+          Rezervasyon Motoru</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/kanal-yoneticisi/'" class="buttons">✓ Kanal Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/kanal-yoneticisi/'" class="buttons">✓ Kanal
+          Yönetimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/ucret-yoneticisi/'" class="buttons">✓ Fiyat Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/ucret-yoneticisi/'" class="buttons">✓ Fiyat
+          Yönetimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/sozlesme-yonetimi-2/'" class="buttons">✓ Sözleşme Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/sozlesme-yonetimi-2/'" class="buttons">✓
+          Sözleşme Yönetimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/banket-yonetimi/'" class="buttons">✓ Banket Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/banket-yonetimi/'" class="buttons">✓ Banket
+          Yönetimi</div>
 
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/satis-projeleri-yonetimi/'" class="buttons">✓ Satış Projeleri Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/satis-projeleri-yonetimi/'" class="buttons">✓
+          Satış Projeleri Yönetimi</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/satis-bloklari/'" class="buttons">✓ Satış Blokları</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/satis-bloklari/'" class="buttons">✓ Satış
+          Blokları</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/seyahat-acenteleri/'" class="buttons">✓ Seyahat Acenteleri</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/seyahat-acenteleri/'" class="buttons">✓ Seyahat
+          Acenteleri</div>
 
         <br>
         <div style="padding-left: 12px;padding-right:12px ;font-weight: bolder;"
-          onclick="location.href='https://www.elektraweb.com/ozellikler/promosyon-yonetimi/'" class="buttons">✓ Promosyon Yönetimi</div>
+          onclick="location.href='https://www.elektraweb.com/ozellikler/promosyon-yonetimi/'" class="buttons">✓
+          Promosyon Yönetimi</div>
 
       </div>
 
@@ -654,12 +772,17 @@
   </div>
   <div style="margin-bottom: 40px;" class="yatay-cizgi"></div>
 
-  <div style="text-align: center;margin-top: 80px;margin-bottom: 80px;"> 
-    <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img src="images/angular1.png" alt=""></button>
-     <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img src="images/nodejs1.png" alt=""></button> 
-     <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img src="images/sql3.png" alt=""></button> 
-     <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img src="images/azure1.png" alt=""></button>
-     <button style="width: 200px;height: 200px;border-radius: 100px;border-style: none;"><img src="images/pci1.png" alt=""></button>
+  <div style="text-align: center;margin-top: 80px;margin-bottom: 80px;">
+    <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img
+        src="images/angular1.png" alt="elektraweb"></button>
+    <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img
+        src="images/nodejs1.png" alt="elektraweb"></button>
+    <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img
+        src="images/sql3.png" alt="elektraweb"></button>
+    <button style="width: 200px;height: 200px;border-radius: 100px;margin-right: 30px;border-style: none;"><img
+        src="images/azure1.png" alt="elektraweb"></button>
+    <button style="width: 200px;height: 200px;border-radius: 100px;border-style: none;"><img src="images/pci1.png"
+      alt="elektraweb"></button>
   </div>
 
 
@@ -771,9 +894,8 @@
     </div>
   </footer>
 
-  
 
-  <a href="#" class="back-to-top"> <i class="fa fa-chevron-up"> </i> </a>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
 
 
 
@@ -802,7 +924,25 @@
 
   <script type="text/javascript" src="js/switcher.js"></script>
 
+  <script>//Get the button:
+    mybutton = document.getElementById("myBtn");
 
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }</script>
 </body>
 
 </html>
