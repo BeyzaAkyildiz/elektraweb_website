@@ -4,8 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
 <style>
+ #btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+
+}
   @media screen and (max-width:719px) {
     .imge {
       width: 70%;
@@ -15,6 +26,7 @@
 
     }
   }
+  
 
   @media screen and (max-width: 1119px) {
 
@@ -231,6 +243,8 @@
     text-align: left;
     /* width:530px; */
   }
+
+ 
 </style>
 
 <body>
@@ -240,27 +254,27 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-content" style="max-width:1400px">
 
     <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32">
+    <!-- <header class="w3-container w3-center w3-padding-32"> -->
 
-      <div class="imge"><img style="width: 40%;" src="image/k.png" alt=""></div>
+      <!-- <div class="imge"><img style="width: 40%;" src="image/k.png" alt=""></div> -->
 
     </header>
-    <ul id="menu">
+    <ul style="height: 100px;" id="menu">
 
 
+      <img style="width: 20%;float: left;" src="image/elektraweb.png" alt="elektraweb">
+      <li style="margin-top: 2.5%;margin-left: 1%;font-weight: "><a href="../index.html" class="drop">ANASAYFA</a>
+      <li style="margin-top: 2.5%;"><a href="#" class="drop">ELEKTRAWEB MODÜLLERİ ⇓</a>
 
-      <li><a href="../index.html" class="drop">ANASAYFA</a>
-      <li><a href="#" class="drop">ELEKTROWEB MODÜLLERİ ⇓</a><!-- Begin 4 columns Item -->
-
-        <div class="dropdown_4columns">
+        <div class="dropdown_4columns" >
           <!-- Begin 4 columns container -->
 
 
 
           <div class="col_1">
 
-            <ul>
-              <li><a href="#Bulut1">● Elektraweb Ön Büro Modülü</a></li>
+            <ul style="font-weight: bold;">
+              <li ><a href="#Bulut1">● Elektraweb Ön Büro Modülü</a></li>
               <li><a href="#Bulut2">● Elektraweb POS Restoran Yönetim Programı</a></li>
               <li><a href="#Bulut3">● ElektraWeb Temassız Misafir Uygulaması</a></li>
               <li><a href="#Bulut4">● ElektraWeb Kanal Yönetimi</a></li>
@@ -930,7 +944,22 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
 
-
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Explanation -->
+    <div class="container mt-4 text-center" style="height: 2000px;">
+      <p>
+        Start scrolling the page and a strong
+        <strong>"Back to top" button </strong> will appear in the
+        <strong>bottom right corner</strong> of the screen.
+      </p>
+    
+      <p>
+        Click this button and you will be taken to the top of the page.
+      </p>
+    </div>
 
 
     <!-- Footer -->
@@ -938,6 +967,36 @@ and is wrapped around the whole page content, except for the footer in this exam
 
       <p style="color: white;">@2021 Beyza Akyıldız</p>
     </footer>
+   <!--back to top-->
+
+<script>
+  //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 
 </body>
 

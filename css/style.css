@@ -485,23 +485,7 @@ footer p{
 	
 }
 
-/* @media  screen and (max-width: 600px){
-	.home-page-photo {
-		
-	
-	 
-          background-size: cover;
-         
-          max-height: 800px;
-		  max-width: 600px;
-        background-image: cover;
-        
-	
-		
-	}
-} */
-/* 
------------------------------------------------------------------------------ */
+
 .back-to-top {
     width: 40px;
     height: 40px;
@@ -513,14 +497,16 @@ footer p{
     z-index: 10000;
 }
 .back-to-top i {
-    color: #fff;
+    color: rgb(31, 17, 17);
+	background-color: #7a7474;
     font-size: 15px;
     display: block;
     line-height: 33px;
 }
 
+
 .yatay-cizgi{
-    border-bottom:4px solid #c3c4c5;
+    border-bottom:4px solid #345577;
 	margin-left: 250px;
     margin-right: 250px;
 
